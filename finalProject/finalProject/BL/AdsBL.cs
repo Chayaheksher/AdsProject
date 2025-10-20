@@ -7,10 +7,14 @@ using static finalProject.AdsDAL;
 
 namespace finalProject
 {
-    public class AdsBL
+    public class AdsBL:IAdsBL
     {
-        AdsDAL fromDal = new AdsDAL();
+        private readonly IAdsDAL fromDal;
 
+        public AdsBL(IAdsDAL adsDal)
+        {
+            fromDal = adsDal;
+        }
         public List<IshurimForAdClass> AdToUser(int userId, DateTime? firstDate, DateTime? endDate)
         {
             return fromDal.AdToUser(userId, firstDate, endDate);

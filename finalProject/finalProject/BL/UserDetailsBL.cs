@@ -6,10 +6,14 @@ using static finalProject.COMMON.Enums;
 
 namespace finalProject
 {
-    public class UserDetailsBL
+    public class UserDetailsBL:IUserDetailsBL
     {
-        UserDetailsDAL fromDal = new UserDetailsDAL();
+        private readonly IUserDetailsDAL fromDal;
 
+        public UserDetailsBL(IUserDetailsDAL userDetailsDAL)
+        {
+            fromDal = userDetailsDAL;
+        }
         public GetUsersDetails4[] GetUsers()
         {
             return fromDal.GetUsers();

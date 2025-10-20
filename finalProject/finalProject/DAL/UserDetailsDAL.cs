@@ -19,7 +19,7 @@ using static finalProject.COMMON.Enums;
 
 namespace finalProject;
 
-public class UserDetailsDAL
+public class UserDetailsDAL: IUserDetailsDAL
 {
     private readonly AdCycContext _db;
 

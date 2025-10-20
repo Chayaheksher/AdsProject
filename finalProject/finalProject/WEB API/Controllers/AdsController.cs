@@ -6,7 +6,12 @@ namespace finalProject.WEB_API.Controllers
     [ApiController]
     public class AdsController : ControllerBase
     {
-        AdsBL fromBl = new AdsBL();
+        private readonly IAdsBL fromBl; 
+
+        public AdsController(IAdsBL adsBL)
+        {
+            fromBl = adsBL;
+        }
 
         [HttpGet("AdToUser/{userId}")]
         public IActionResult AdToUser(int userId, [FromQuery] DateTime? firstDate, [FromQuery] DateTime? endDate)

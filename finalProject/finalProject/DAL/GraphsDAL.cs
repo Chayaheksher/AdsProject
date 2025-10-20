@@ -19,7 +19,7 @@ using static finalProject.COMMON.Enums;
 
 namespace finalProject;
 
-public class GraphsDAL
+public class GraphsDAL: IGraphsDAL
 {
     private readonly AdCycContext _db;
 

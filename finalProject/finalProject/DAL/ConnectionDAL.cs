@@ -19,7 +19,7 @@ using static finalProject.COMMON.Enums;
 
 namespace finalProject;
 
-public class ConnectionDAL
+public class ConnectionDAL: IConnectionDAL
 {
     private readonly AdCycContext _db;
 

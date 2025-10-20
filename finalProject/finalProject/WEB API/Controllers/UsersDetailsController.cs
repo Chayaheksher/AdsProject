@@ -9,8 +9,12 @@ namespace finalProject.Controllers
     [ApiController]
     public class UsersDetailsController : ControllerBase
     {
-        UserDetailsBL fromBl = new UserDetailsBL();
+        private readonly IUserDetailsBL fromBl;
 
+        public UsersDetailsController(IUserDetailsBL userDetailsBL)
+        {
+            fromBl = userDetailsBL;
+        }
         [HttpGet]
         public IActionResult GetUsers()
         {

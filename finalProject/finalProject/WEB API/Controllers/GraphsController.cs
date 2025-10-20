@@ -7,7 +7,12 @@ namespace finalProject.WEB_API.Controllers
     [ApiController]
     public class GraphsController : ControllerBase
     {
-        GraphsBL fromBl = new GraphsBL();
+        private readonly IGraphsBL fromBl;
+
+        public GraphsController(IGraphsBL graphsBL)
+        {
+            fromBl = graphsBL;
+        }
 
         [HttpGet("ApprovalUsers/{selectedMonth}")]
         public IActionResult ApprovalUsers(string selectedMonth)

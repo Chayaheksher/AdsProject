@@ -7,9 +7,14 @@ using static finalProject.GraphsDAL;
 
 namespace finalProject
 {
-    public class GraphsBL
+    public class GraphsBL:IGraphsBL
     {
-        GraphsDAL fromDal = new GraphsDAL();
+        private readonly IGraphsDAL fromDal;
+
+        public GraphsBL(IGraphsDAL graphsDAL)
+        {
+            fromDal = graphsDAL;
+        }
 
         public List<ApprovalUsersClass> ApprovalUsers(string selectedMonth)
         {

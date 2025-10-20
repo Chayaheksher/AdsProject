@@ -6,9 +6,14 @@ using static finalProject.COMMON.Enums;
 
 namespace finalProject
 {
-    public class ConnectionBL
+    public class ConnectionBL:IConnectionBL
     {
-        ConnectionDAL fromDal = new ConnectionDAL();
+        private readonly IConnectionDAL fromDal;
+
+        public ConnectionBL(IConnectionDAL connectionDAL)
+        {
+            fromDal = connectionDAL;
+        }
         public async Task<UserLogin> UserLogin(string userName, int userPassword)
         {
             return await fromDal.UserLogin(userName, userPassword);
