@@ -17,51 +17,43 @@ namespace finalProject.WEB_API.Controllers
             string apiUrlUSD = "https://boi.org.il/PublicApi/GetExchangeRate?Key=USD";
             string apiUrlInterest = "https://boi.org.il/PublicApi/GetInterest";
 
-            try
+            using (HttpClient client = new HttpClient())
             {
-                using (HttpClient client = new HttpClient())
+                HttpResponseMessage responseEUR = await client.GetAsync(apiUrlEUR);
+                HttpResponseMessage responseUSD = await client.GetAsync(apiUrlUSD);
+                HttpResponseMessage responseInterest = await client.GetAsync(apiUrlInterest);
+
+                if (responseEUR.IsSuccessStatusCode && responseUSD.IsSuccessStatusCode && responseInterest.IsSuccessStatusCode)
                 {
-                    HttpResponseMessage responseEUR = await client.GetAsync(apiUrlEUR);
-                    HttpResponseMessage responseUSD = await client.GetAsync(apiUrlUSD);
-                    HttpResponseMessage responseInterest = await client.GetAsync(apiUrlInterest);
+                    string responseBodyEUR = await responseEUR.Content.ReadAsStringAsync();
+                    string responseBodyUSD = await responseUSD.Content.ReadAsStringAsync();
+                    string responseBodyInterest = await responseInterest.Content.ReadAsStringAsync();
 
-                    if (responseEUR.IsSuccessStatusCode && responseUSD.IsSuccessStatusCode && responseInterest.IsSuccessStatusCode)
+                    // Parse JSON responses
+                    var jsonEUR = JsonDocument.Parse(responseBodyEUR).RootElement;
+                    var jsonUSD = JsonDocument.Parse(responseBodyUSD).RootElement;
+                    var jsonInterest = JsonDocument.Parse(responseBodyInterest).RootElement;
+
+                    // Extract specific fields
+                    var exchangeRateEUR = jsonEUR.GetProperty("currentExchangeRate").GetDecimal();
+                    var exchangeRateUSD = jsonUSD.GetProperty("currentExchangeRate").GetDecimal();
+                    var interestRate = jsonInterest.GetProperty("currentInterest").GetDecimal();
+
+                    // Return only the required fields
+                    var result = new
                     {
-                        string responseBodyEUR = await responseEUR.Content.ReadAsStringAsync();
-                        string responseBodyUSD = await responseUSD.Content.ReadAsStringAsync();
-                        string responseBodyInterest = await responseInterest.Content.ReadAsStringAsync();
+                        currentExchangeRateEUR = exchangeRateEUR,
+                        currentExchangeRateUSD = exchangeRateUSD,
+                        currentInterest = interestRate
+                    };
 
-                        // Parse JSON responses
-                        var jsonEUR = JsonDocument.Parse(responseBodyEUR).RootElement;
-                        var jsonUSD = JsonDocument.Parse(responseBodyUSD).RootElement;
-                        var jsonInterest = JsonDocument.Parse(responseBodyInterest).RootElement;
-
-                        // Extract specific fields
-                        var exchangeRateEUR = jsonEUR.GetProperty("currentExchangeRate").GetDecimal();
-                        var exchangeRateUSD = jsonUSD.GetProperty("currentExchangeRate").GetDecimal();
-                        var interestRate = jsonInterest.GetProperty("currentInterest").GetDecimal();
-
-                        // Return only the required fields
-                        var result = new
-                        {
-                            currentExchangeRateEUR = exchangeRateEUR,
-                            currentExchangeRateUSD = exchangeRateUSD,
-                            currentInterest = interestRate
-                        };
-
-                        return Ok(result);
-                    }
-                    else
-                    {
-                        return BadRequest($"Failed to call the API. Status code: {responseEUR.StatusCode}, {responseUSD.StatusCode}, {responseInterest.StatusCode}");
-                    }
+                    return Ok(result);
                 }
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"An error occurred: {ex.Message}");
+                else
+                {
+                    return BadRequest($"Failed to call the API. Status code: {responseEUR.StatusCode}, {responseUSD.StatusCode}, {responseInterest.StatusCode}");
+                }
             }
         }
     }
 }
-

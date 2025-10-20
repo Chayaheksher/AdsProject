@@ -20,7 +20,7 @@ namespace finalProject.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message + " בעיה בקונטרולר");
+                return BadRequest(ex.Message);
             }
         }
         [Route("api/rolenames")]
@@ -34,7 +34,7 @@ namespace finalProject.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message + " בעיה בקונטרולר");
+                return BadRequest(ex.Message);
             }
         }
 
@@ -49,7 +49,7 @@ namespace finalProject.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message + " בעיה בקונטרולר");
+                return BadRequest(ex.Message);
             }
         }
         [Route("communication/comName")]
@@ -62,7 +62,7 @@ namespace finalProject.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message + " בעיה בקונטרולר");
+                return BadRequest(ex.Message);
             }
         }
 

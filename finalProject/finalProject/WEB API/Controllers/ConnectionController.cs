@@ -12,15 +12,8 @@ namespace finalProject.Controllers
         [HttpGet("UserLogin/{userName}/{userPassword}")]
         public IActionResult UserLogin(string userName, int userPassword)
         {
-            try
-            {
-                var ook = fromBl.UserLogin(userName, userPassword);
-                return Ok(new { ook });
-            }
-            catch (Exception ex) 
-            { 
-                return BadRequest(ex.Message+" בעיה בקונטרולר");
-            }
+            var ook = fromBl.UserLogin(userName, userPassword);
+            return Ok(new { ook });
         }
     }
 }

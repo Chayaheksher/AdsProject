@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\finalproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\finalproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\graphscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\graphscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\workcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +15,28 @@
       "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\usersdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\usersdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\graphscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\graphscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\connectioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\connectioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\adscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\middleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\middleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\web api\\controllers\\usersdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\web api\\controllers\\usersdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\finalproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|solutionrelative:finalproject\\finalproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA07CE5C-D525-4357-BFC0-9C8E863FACE8}|finalProject\\finalProject.csproj|d:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\adsproject\\finalproject\\finalproject\\dal\\dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,11 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BL.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\BL\\BL.cs",
               "RelativeDocumentMoniker": "finalProject\\BL\\BL.cs",
@@ -96,13 +100,91 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Middleware.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Middleware.cs",
+              "RelativeDocumentMoniker": "finalProject\\Middleware.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Middleware.cs",
+              "RelativeToolTip": "finalProject\\Middleware.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T20:29:30.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GraphsController.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\GraphsController.cs",
+              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\GraphsController.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\GraphsController.cs",
+              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\GraphsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T09:41:32.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AdsController.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\AdsController.cs",
+              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\AdsController.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\AdsController.cs",
+              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\AdsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:10:45.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConnectionController.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\ConnectionController.cs",
+              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\ConnectionController.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\ConnectionController.cs",
+              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\ConnectionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T08:15:42.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T08:47:54.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WorkController.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WorkController.cs",
+              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\WorkController.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WorkController.cs",
+              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\WorkController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T13:38:07.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UsersDetailsController.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\UsersDetailsController.cs",
               "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\UsersDetailsController.cs",
               "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\UsersDetailsController.cs",
               "RelativeToolTip": "finalProject\\WEB API\\Controllers\\UsersDetailsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T17:19:31.447Z",
               "EditorCaption": ""
@@ -110,45 +192,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GraphsController.cs",
-              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\GraphsController.cs",
-              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\GraphsController.cs",
-              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\GraphsController.cs",
-              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\GraphsController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAD4vzcAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Program.cs",
+              "RelativeDocumentMoniker": "finalProject\\Program.cs",
+              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Program.cs",
+              "RelativeToolTip": "finalProject\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T09:41:32.172Z",
+              "WhenOpened": "2024-05-29T09:21:56.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T08:47:54.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WorkController.cs",
-              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WorkController.cs",
-              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\WorkController.cs",
-              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\WorkController.cs",
-              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\WorkController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T13:38:07.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "finalProject.http",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\finalProject.http",
               "RelativeDocumentMoniker": "finalProject\\finalProject.http",
@@ -156,51 +212,11 @@
               "RelativeToolTip": "finalProject\\finalProject.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-07-02T12:13:53.564Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T12:13:53.564Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Program.cs",
-              "RelativeDocumentMoniker": "finalProject\\Program.cs",
-              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Program.cs",
-              "RelativeToolTip": "finalProject\\Program.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:21:56.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConnectionController.cs",
-              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\ConnectionController.cs",
-              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\ConnectionController.cs",
-              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\ConnectionController.cs",
-              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\ConnectionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T08:15:42.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AdsController.cs",
-              "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\AdsController.cs",
-              "RelativeDocumentMoniker": "finalProject\\WEB API\\Controllers\\AdsController.cs",
-              "ToolTip": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\WEB API\\Controllers\\AdsController.cs",
-              "RelativeToolTip": "finalProject\\WEB API\\Controllers\\AdsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T15:10:45.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DAL.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\DAL\\DAL.cs",
               "RelativeDocumentMoniker": "finalProject\\DAL\\DAL.cs",
@@ -213,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Enums.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\COMMON\\Enums.cs",
               "RelativeDocumentMoniker": "finalProject\\COMMON\\Enums.cs",
@@ -221,12 +237,11 @@
               "RelativeToolTip": "finalProject\\COMMON\\Enums.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T16:05:03.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T16:05:03.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Helper.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\BL\\Helper.cs",
               "RelativeDocumentMoniker": "finalProject\\BL\\Helper.cs",
@@ -234,12 +249,11 @@
               "RelativeToolTip": "finalProject\\BL\\Helper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T18:00:53.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T18:00:53.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AdCycContext.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Models1\\AdCycContext.cs",
               "RelativeDocumentMoniker": "finalProject\\Models1\\AdCycContext.cs",
@@ -251,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IshurimForAdClass.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Models1\\IshurimForAdClass.cs",
               "RelativeDocumentMoniker": "finalProject\\Models1\\IshurimForAdClass.cs",
@@ -263,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AdDiaryClass.cs",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\Models1\\AdDiaryClass.cs",
               "RelativeDocumentMoniker": "finalProject\\Models1\\AdDiaryClass.cs",
@@ -275,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "finalProject",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\finalProject.csproj",
               "RelativeDocumentMoniker": "finalProject\\finalProject.csproj",
@@ -286,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "finalProject.csproj",
               "DocumentMoniker": "D:\\\u05D7\u05D9\u05D4\\\u05EA\u05DB\u05E0\u05D5\u05EA \u05E1\u05DE\u05D9\u05E0\u05E8\\AdsProject\\finalProject\\finalProject\\finalProject.csproj",
               "RelativeDocumentMoniker": "finalProject\\finalProject.csproj",
