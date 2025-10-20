@@ -1,0 +1,30 @@
+<div *ngIf="charactersId===characterIdNeedApproval||charactersId===1">
+  <div *ngIf="theNowStatus!==7&&theNowStatus!==10">
+    <span>סטטוס: </span>
+    <span> {{theNowStatusName}}</span>
+    <br>
+
+    <mat-radio-group [(ngModel)]="ishurOrDchiya" mat-flat-radio-button color="primary">
+      <mat-radio-button [value]="true" matTooltip="אישור">אישור</mat-radio-button>
+      <mat-radio-button [value]="false" matTooltip="דחיה">דחיה</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>הערה</mat-label>
+      <textarea matInput placeholder="" [(ngModel)]="note"></textarea>
+    </mat-form-field>
+    <mat-icon aria-hidden="false" aria-label="Example save icon" fontIcon="save" matTooltip="שמירה"
+      (click)="SaveIshurOrDchiya()"></mat-icon>
+    <br>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor="let item of forBitul">
+    {{item.approvalType}}
+    {{item.approvalOrRejection}} על ידי
+    {{item.userName}}
+    בתאריך {{ item.executionDate | date:'dd/MM/yyyy' }}
+    <a *ngIf="item === forBitul[0]" (click)="BitulApprovalOrRejection(item.ishurForAdRow)"> ביטול </a>
+  </li>
+</ul>

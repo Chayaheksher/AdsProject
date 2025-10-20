@@ -1,0 +1,73 @@
+# Dependencies
+node_modules/
+.pnp
+pnp.js
+.yarn/install-state.gz
+
+# Build output
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+# Angular cache
+.angular/
+.angular/cache/
+
+# Environment files
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# IDEs and editors
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.vscode/*
+!.vscode/extensions.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+coverage.json
+coverage.lcov
+coverage.xml
+
+# Test artifacts
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Miscellaneous
+*.bak
+*.gho
+*.orig
+*.tmp
+*.backup
+*.cache
+*.lock
+*~
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

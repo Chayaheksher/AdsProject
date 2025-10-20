@@ -1,0 +1,27 @@
+.status{
+    border-radius: 2;
+    border-color: black;
+}
+.statusSize{
+    width: 20px;
+}
+.arrow-right:after {
+    content: "";
+    display: inline-block !important;
+    width: 0;
+    height: 0;
+    border-right: 12px solid #4915b8;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    vertical-align: middle;
+  
+  }
+  
+  .arrow-right:before {
+    width: 50px;
+    height: 10px;
+    background: #4915b8;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+  }

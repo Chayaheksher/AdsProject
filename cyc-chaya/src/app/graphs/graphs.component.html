@@ -1,0 +1,19 @@
+<input type="month" [(ngModel)]="selectedMonth" (change)="ChangeDate($event)">
+<div class="father">
+    <div class="chart-container" *ngIf="isChart1===false">
+        <canvas id="MyChart">{{ chart }}</canvas>
+    </div>
+    <p *ngIf="isChart1===true"> אין אישורים בחודש זה </p>
+    <div class="chart-container" *ngIf="isChart2===false">
+        <canvas id="MyChart1">{{ chart }}</canvas>
+    </div>
+    <p *ngIf="isChart2===true"> אין מודעות בסטטוסים שבוצעו בחודש זה </p>
+    <div class="chart-container" *ngIf="isChart3===false">
+        <canvas id="MyChart2">{{ chart }}</canvas>
+    </div>
+    <p *ngIf="isChart3===true"> אין מודעות בקטגוריות שפורסמו בחודש זה </p>
+    <div class="chart-container" *ngIf="isChart4===false">
+        <canvas id="MyChart3">{{ chart }}</canvas>
+    </div>
+    <p *ngIf="isChart4===true"> אין חיובים ללקוח בחודש זה</p>
+</div>

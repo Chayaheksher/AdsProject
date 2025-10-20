@@ -1,0 +1,9 @@
+
+{
+  "/api": {
+    "target": "https://boi.org.il/PublicApi",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

@@ -1,0 +1,37 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$cyc-chaya-primary: mat.define-palette(mat.$indigo-palette);
+$cyc-chaya-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$cyc-chaya-warn: mat.define-palette(mat.$red-palette);
+
+
+$cyc-chaya-theme: mat.define-light-theme((
+  color: (
+    primary: $cyc-chaya-primary,
+    accent: $cyc-chaya-accent,
+    warn: $cyc-chaya-warn,
+  )
+));
+
+@include mat.all-component-themes($cyc-chaya-theme);
+
+@include mat.core();
+
+$cyc-chaya-primary: mat.define-palette(mat.$indigo-palette);
+$cyc-chaya-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$cyc-chaya-warn: mat.define-palette(mat.$red-palette);
+
+$cyc-chaya-theme: mat.define-light-theme((
+  color: (
+    primary: $cyc-chaya-primary,
+    accent: $cyc-chaya-accent,
+    warn: $cyc-chaya-warn,
+  )
+));
+
+@include mat.all-component-themes($cyc-chaya-theme);
+

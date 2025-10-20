@@ -1,0 +1,45 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root {
+    --small-screen: 576px;
+    --medium-screen: 768px;
+    --large-screen: 992px;
+    --extra-large-screen: 1200px;
+}
+
+.example {
+    font-size: 16px; 
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+@media screen and (max-width: var(--small-screen)) {
+    .example {
+        font-size: 14px;
+        padding: 5px; 
+    }
+}
+
+@media screen and (min-width: var(--small-screen)) and (max-width: var(--medium-screen)) {
+    .example {
+        font-size: 16px; 
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: var(--medium-screen)) and (max-width: var(--large-screen)) {
+    .example {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+@media screen and (min-width: var(--large-screen)) {
+    .example {
+        font-size: 20px; 
+        padding: 20px;
+    }
+}

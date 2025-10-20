@@ -1,0 +1,9 @@
+ .items-container {
+    display: flex;        
+    flex-wrap: wrap;    
+    gap: 10px;         
+  }
+  .item {
+    flex: 0 1 auto; 
+    
+  }

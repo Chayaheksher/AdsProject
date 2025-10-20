@@ -1,0 +1,59 @@
+<div class="my-cont">
+<h1 mat-dialog-title>עריכת משתמש</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editOrNewUser" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>שם מלא</mat-label>
+      <input formControlName="fullName" matInput value="">
+    </mat-form-field>
+    <input type="hidden" formControlName="userId" [value]="data.userId"> 
+    <div class="example-container">
+      <mat-form-field hintLabel="עד 30 אותיות">
+        <mat-label >הכנס שם משתמש</mat-label>
+        <input formControlName="userName" matInput #input maxlength="30">
+        <mat-hint align="end">{{input.value.length}}/30</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>הכנס סיסמא</mat-label>
+        <input formControlName="passwords" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <mat-label>בחר תפקיד</mat-label>
+      <mat-select formControlName="charactersName">
+        <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div formArrayName="getCommunication">
+      <div *ngFor="let communicationGroup of getCommunication.controls; let i = index" [formGroupName]="i">
+        <mat-form-field>
+          <mat-label>סוג אמצעי קשר</mat-label>
+          <mat-select formControlName="communicationTypeDescription">
+            <mat-option *ngFor="let com of communicationString" [value]="com">{{ com }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>תוכן</mat-label>
+          <input formControlName="communicationDetails" matInput value="">
+        </mat-form-field>
+
+        <input type="hidden" formControlName="communicationID" [value]=" getCommunication.at(i).get('communicationID').value">
+        <mat-radio-group formControlName="mainComunication" (change)="setMainCommunication(i)">
+          <mat-radio-button mat-flat-radio-button color="primary" [value]="true">אמצעי קשר עיקרי</mat-radio-button>
+        </mat-radio-group>
+
+      </div>
+    </div>
+    <mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="add" (click)="addCom()"></mat-icon>
+    <button mat-button mat-dialog-close (click)="save()" mat-flat-button color="primary" [disabled]="editOrNewUser.invalid">שמור</button>
+  </form>
+</div>
+</div>

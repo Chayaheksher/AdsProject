@@ -1,0 +1,69 @@
+.middle{
+    margin-top: 12%;
+    text-align: center;
+}
+
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+
+  }
+   .a{
+    width: 250PX;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  } 
+  .btn{
+    background-color: rgb(2, 92, 209);
+    color: white;
+    width: 150px;
+    border-radius: 4px;
+    padding:10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    border-color: rgb(255, 255, 255);
+    border-width: 5px;
+    box-shadow: 0 0 0 2px red;
+
+  }
+  .content-wrapper {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bottom-page {
+    margin-top: auto;
+    height: 100px;
+    background-color: rgba(33, 57, 108, 0.955);
+    align-content: end;
+  }
+  
+  .image-container img {
+    margin-top: -10%;
+    margin-bottom: 20px; 
+    width: 25vw;
+    height: auto;
+  }
+  .image-container img {
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  
+  @keyframes scaleAnimation {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  .image-container img {
+    animation: scaleAnimation 3s infinite alternate;
+  }
+
+  

@@ -1,0 +1,7 @@
+<span>{{step.userName}}</span>
+<br>
+<span class="arrow-right"></span>
+<span [ngStyle]="{'background-color': (step.approvalOrRejectionCode==2) ? 'green' : 'red'}" class="statusSize">{{
+    step.ishurType}}</span>
+<br>
+<span>{{step.dateAndTime|date}}</span>

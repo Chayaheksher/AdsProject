@@ -1,0 +1,18 @@
+.chart-container {
+    width: 480PX;
+}
+
+.father {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+P {
+    margin: 15PX;
+}
+
+input {
+    margin-left: 45%;
+    margin-bottom: 40PX;
+}

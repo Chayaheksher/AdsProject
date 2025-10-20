@@ -1,0 +1,366 @@
+[
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "AdApproval",
+    "RelativePath": "api/Ads/AdApproval/{adId}/{userId}/{currectAdStatus}/{isApproval}/{ishurForAdNote}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "currectAdStatus",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "isApproval",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      },
+      {
+        "Name": "ishurForAdNote",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "AdDiary",
+    "RelativePath": "api/Ads/AdDiary/{adId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "AdToUser",
+    "RelativePath": "api/Ads/AdToUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "firstDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "AdToUserWithDate",
+    "RelativePath": "api/Ads/AdToUserWithDate/{userId}/{firstDate}/{endDate}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "firstDate",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "CancelApprovalOrRejection",
+    "RelativePath": "api/Ads/CancelApprovalOrRejection/{adRowToDelete}/{adRowToUpdate}/{adId}/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adRowToDelete",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "adRowToUpdate",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "adId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "OutApi",
+    "RelativePath": "api/Ads/OutApi/{userId}/{charactersIDInsertRow}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "charactersIDInsertRow",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "ShaarAd",
+    "RelativePath": "api/Ads/ShaarAd",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.AdsController",
+    "Method": "StatusForRejection",
+    "RelativePath": "api/Ads/StatusForRejection",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.GraphsController",
+    "Method": "AdCategory",
+    "RelativePath": "api/Graphs/AdCategory/{selectedMonth}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "selectedMonth",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.GraphsController",
+    "Method": "ApprovalUsers",
+    "RelativePath": "api/Graphs/ApprovalUsers/{selectedMonth}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "selectedMonth",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.GraphsController",
+    "Method": "SumCustomerCharge",
+    "RelativePath": "api/Graphs/SumCustomerCharge/{selectedMonth}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "selectedMonth",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.GraphsController",
+    "Method": "WhereStatusAds",
+    "RelativePath": "api/Graphs/WhereStatusAds/{selectedMonth}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "selectedMonth",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.Controllers.UsersDetailsController",
+    "Method": "GetUsers",
+    "RelativePath": "api/UsersDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.Controllers.UsersDetailsController",
+    "Method": "RoleName",
+    "RelativePath": "api/UsersDetails/api/rolenames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.Controllers.UsersDetailsController",
+    "Method": "getCommunication",
+    "RelativePath": "api/UsersDetails/communication",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "finalProject.Models1.communicationClass[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "finalProject.Controllers.UsersDetailsController",
+    "Method": "CommunicationName",
+    "RelativePath": "api/UsersDetails/communication/comName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.Controllers.UsersDetailsController",
+    "Method": "UpsertUser",
+    "RelativePath": "api/UsersDetails/saveUserDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDetails",
+        "Type": "finalProject.Models.SaveUserDedails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.WEB_API.Controllers.WorkController",
+    "Method": "IsWork",
+    "RelativePath": "api/Work",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.Controllers.ConnectionController",
+    "Method": "UserLogin",
+    "RelativePath": "Connection/UserLogin/{userName}/{userPassword}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "userPassword",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "finalProject.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[finalProject.WeatherForecast, finalProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
