@@ -7,7 +7,7 @@ namespace finalProject.Controllers
     [Route("[controller]")]
     public class ConnectionController : ControllerBase
     {
-        BL fromBl = new BL();
+        ConnectionBL fromBl = new ConnectionBL();
 
         [HttpGet("UserLogin/{userName}/{userPassword}")]
         public IActionResult UserLogin(string userName, int userPassword)

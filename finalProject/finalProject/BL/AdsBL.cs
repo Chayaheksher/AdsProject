@@ -3,54 +3,14 @@ using finalProject.Models;
 using finalProject.Models1;
 using System.Text.Json;
 using static finalProject.COMMON.Enums;
-using static finalProject.DAL;
+using static finalProject.AdsDAL;
 
 namespace finalProject
 {
-    public class BL
+    public class AdsBL
     {
-        DAL fromDal = new DAL();
-        public async Task<UserLogin> UserLogin(string userName, int userPassword)
-        {
-            return await fromDal.UserLogin(userName, userPassword);
-        }
+        AdsDAL fromDal = new AdsDAL();
 
-        public GetUsersDetails4[] GetUsers()
-        {
-            return fromDal.GetUsers();
-        }
-
-        public List<string> RoleName()
-        {
-            return fromDal.RoleName();
-        }
-
-        public communicationClass[] GetCommunication()
-        {
-            return fromDal.GetCommunication();
-        }
-
-        public string[] CommunicationName()
-        {
-            return fromDal.CommunicationName();
-        }
-
-        public void UpsertUserAndCommunications(SaveUserDedails userDetails)
-        {
-            try
-            {
-                if (userDetails == null)
-                {
-                    throw new ArgumentNullException(nameof(userDetails), "User details cannot be null.");
-                }
-                 fromDal.UpsertUserAndCommunications(userDetails);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error in UpsertUserAndCommunications BL: {ex.Message}");
-                throw;
-            }
-        }
         public List<IshurimForAdClass> AdToUser(int userId, DateTime? firstDate, DateTime? endDate)
         {
             return fromDal.AdToUser(userId, firstDate, endDate);
@@ -66,6 +26,22 @@ namespace finalProject
             return fromDal.AdDiary(adId);
         }
 
+        private static StatusIshurEnum GetStatusIshur(AdStatusEnum currentAdStatus, bool isApproval)
+        {
+            StatusIshurEnum statusIshurAd;
+            if (!isApproval)
+            {
+                {
+                    statusIshurAd = StatusIshurEnum.rejected;
+                }
+            }
+            else
+            {
+                statusIshurAd = StatusIshurEnum.approved;
+            }
+
+            return statusIshurAd;
+        }
         public bool AdApproval(int adId, int userId, int currentAdStatus, bool isApproval, string ishurForAdNote)
         {
             if((currentAdStatus == (int)AdStatusEnum.CustomerMaterials || currentAdStatus==(int)AdStatusEnum.WillPublication)&& isApproval == true)
@@ -81,63 +57,11 @@ namespace finalProject
             if ((AdStatusEnum)currentAdStatus == AdStatusEnum.WillPublication && isApproval)
             {
                  fromDal.UpdateDateAd(adId, statusIshurAd);
-                //התהליך בשביל הסטטוס הבא:
-                // לבדוק אם קיימים מספר תאריכי פרסום שעדיין לא פורסמו
-
                 isExistsPublicationDates =  fromDal.IsSeveralPublicationDates(adId);
             }
-            //וליצור שורה חדשה מהסטטוס הבא
             Helper.NextOrReverseStatusAndRoll nextOrReversStatus = isApproval ? Helper.GetNextStatus((AdStatusEnum)currentAdStatus, isExistsPublicationDates) : Helper.GetReversStatus((AdStatusEnum)currentAdStatus);
             fromDal.InsertNextOrReversAdStatus(nextOrReversStatus.AdStatusEnum, nextOrReversStatus.RolesEnum, adId, userId);
             return true;
-        }
-
-        private static StatusIshurEnum GetStatusIshur(AdStatusEnum currentAdStatus, bool isApproval)
-        {
-            StatusIshurEnum statusIshurAd;
-            if (!isApproval)
-            {
-                //if ((AdStatusEnum)currentAdStatus == AdStatusEnum.Bid || (AdStatusEnum)currentAdStatus == AdStatusEnum.CustomerMaterials || (AdStatusEnum)currentAdStatus == AdStatusEnum.WillPublication)
-                //{
-                //    statusIshurAd = StatusIshurEnum.cancelled;
-                //}
-                //else
-                {
-                    statusIshurAd = StatusIshurEnum.rejected;
-                }
-            }
-            else
-            {
-                statusIshurAd = StatusIshurEnum.approved;
-            }
-
-            return statusIshurAd;
-        }
-
-
-        public List<ApprovalUsersClass> ApprovalUsers(string selectedMonth)
-        {
-            return fromDal.ApprovalUsers(selectedMonth);
-        }
-
-        public List<WhereStatusAdsClass> WhereStatusAds(string selectedMonth)
-        {
-            return fromDal.WhereStatusAds(selectedMonth);
-        }
-
-        public List<AdCategoryClass> AdCategory(string selectedMonth)
-        {
-            return fromDal.AdCategory(selectedMonth);
-        }
-
-        public List<sumCustomerCharge> SumCustomerCharge(string selectedMonth)
-        {
-            return fromDal.SumCustomerCharge(selectedMonth);
-        }
-
-        public List<StatusForRejectionClass> StatusForRejection(int adId)
-        {
-            return fromDal.StatusForRejection(adId);
         }
 
         public bool CancelApprovalOrRejection(int adRowToDelete, int adRowToUpdate, int adId, int userId)
@@ -215,6 +139,10 @@ namespace finalProject
             {
                 return false;
             }
+        }
+        public List<StatusForRejectionClass> StatusForRejection(int adId)
+        {
+            return fromDal.StatusForRejection(adId);
         }
     }
 }

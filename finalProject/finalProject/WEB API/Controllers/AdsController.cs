@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using static finalProject.DAL;
 
 namespace finalProject.WEB_API.Controllers
 {
@@ -7,7 +6,7 @@ namespace finalProject.WEB_API.Controllers
     [ApiController]
     public class AdsController : ControllerBase
     {
-        BL fromBl = new BL();
+        AdsBL fromBl = new AdsBL();
 
         [HttpGet("AdToUser/{userId}")]
         public IActionResult AdToUser(int userId, [FromQuery] DateTime? firstDate, [FromQuery] DateTime? endDate)

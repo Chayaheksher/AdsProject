@@ -19,99 +19,13 @@ using static finalProject.COMMON.Enums;
 
 namespace finalProject;
 
-public class DAL
+public class AdsDAL
 {
     private readonly AdCycContext _db;
 
-    public DAL()
+    public AdsDAL()
     {
         _db = new AdCycContext();
-    }
-
-    public async Task<UserLogin> UserLogin(string userName, int userPassword)
-    {
-        // Retrieve user from the Users table based on userName and userPassword
-        var user = _db.Users
-            .Where(u => u.UserName == userName && u.Passwords == userPassword)
-            .Select(u => new
-            {
-                u.UserId,
-                u.UserName,
-                u.CharactersId
-            })
-            .FirstOrDefault();
-
-        if (user != null)
-        {
-            // Update LastEnterDate
-            var userEntity = await _db.Users.FindAsync(user.UserId);
-            userEntity.LastEnterDate = DateTime.UtcNow;
-            await _db.SaveChangesAsync();
-
-            // Retrieve the character's name associated with the user
-            var character = _db.Characters
-                .Where(c => c.CharactersId == user.CharactersId)
-                .Select(c => new
-                {
-                    c.CharactersName
-                })
-                .FirstOrDefault();
-
-            if (character != null)
-            {
-                return new UserLogin
-                {
-                    userId = user.UserId,
-                    userName = user.UserName,
-                    charactersId = user.CharactersId,
-                    charactersName = character.CharactersName
-                };
-            }
-        }
-
-        return new UserLogin
-        {
-            charactersId = -2,
-            charactersName = "שם לא קיים",
-            userName = "שם לא קיים",
-            userId = -2
-        };
-    }
-
-
-
-
-    public GetUsersDetails4[] GetUsers()
-    {
-        return _db.GetUsersDetails4s.ToArray();
-    }
-
-    public List<string> RoleName()
-    {
-        return _db.Characters.Select(x => x.CharactersName).ToList();
-    }
-
-    public communicationClass[] GetCommunication()
-    {
-        var commounication = from cu in _db.CommunicationUsers
-                             join ct in _db.CommunicationTypes
-                             on cu.CommunicationType equals ct.CommunicationType1
-                             join u in _db.Users
-                             on cu.UserId equals u.UserId
-                             select new communicationClass
-                             {
-                                 userId = u.UserId,
-                                 CommunicationTypeDescription = ct.Description,
-                                 communicationID = cu.CommunicationId,
-                                 communicationDetails = cu.Contant,
-                                 mainComunication = cu.Main
-                             };
-        return commounication.ToArray();
-    }
-
-    public string[] CommunicationName()
-    {
-        return _db.CommunicationTypes.Select(x => x.Description).ToArray();
     }
 
     private string ConvertToXml(List<SaveComm> communications, int? userID)
@@ -260,6 +174,7 @@ public class DAL
                       };
         return adDiary.ToList();
     }
+
     public bool hasMaterialOrPubDatePast(int adId, int currentAdStatus)
     {
         if (currentAdStatus == (int)AdStatusEnum.CustomerMaterials)
@@ -279,7 +194,6 @@ public class DAL
     };
         _db.ExecuteStoredProcedure(storedProcedureName, parameters);
     }
-
     public void UpdateDateAd(int adId, StatusIshurEnum statusIshur)
     {
         var storedProcedureName = "HayaHUpdateDateAd";
@@ -316,91 +230,105 @@ public class DAL
         }
 
     }
+    //public void UpdateDateAd(int adId, StatusIshurEnum statusIshur)
+    //{
+    //    var storedProcedureName = "HayaHUpdateDateAd";
+    //    var parameters = new[]
+    //    {
+    //        new SqlParameter("AdId", adId),
+    //        new SqlParameter("StatusIshur", (int)statusIshur)
+    //    };
+    //    _db.ExecuteStoredProcedure(storedProcedureName, parameters);
+    //}
+    //public bool IsSeveralPublicationDates(int adId)
+    //{
+    //    return _db.PublicationDates.Any(pd => pd.AdId == adId && pd.StatusIshurId != (int)StatusIshurEnum.published);
+    //}
 
-    public class ApprovalUsersClass
-    {
-        public int? userId { get; set; }
-        public string? userName { get; set; }
-        public int countIshurim { get; set; }
-    }
-    public List<ApprovalUsersClass> ApprovalUsers(string selectedMonth)
-    {
-        DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
-        var approvalUsers = from adsIshurim in _db.IshurForAds
-                            join users in _db.Users on adsIshurim.UserId equals users.UserId
-                            where (adsIshurim.KodStatusIshur == (int)StatusIshurEnum.approved) &&
-                             adsIshurim.ExecutionDate == parsedDate
-                            group adsIshurim by new { adsIshurim.UserId, users.UserName } into grouped
-                            select new ApprovalUsersClass
-                            {
-                                userId = grouped.Key.UserId,
-                                userName = grouped.Key.UserName,
-                                countIshurim = grouped.Count()
-                            };
-        return approvalUsers.ToList();
-    }
+    //public class ApprovalUsersClass
+    //{
+    //    public int? userId { get; set; }
+    //    public string? userName { get; set; }
+    //    public int countIshurim { get; set; }
+    //}
+    //public List<ApprovalUsersClass> ApprovalUsers(string selectedMonth)
+    //{
+    //    DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
+    //    var approvalUsers = from adsIshurim in _db.IshurForAds
+    //                        join users in _db.Users on adsIshurim.UserId equals users.UserId
+    //                        where (adsIshurim.KodStatusIshur == (int)StatusIshurEnum.approved) &&
+    //                         adsIshurim.ExecutionDate == parsedDate
+    //                        group adsIshurim by new { adsIshurim.UserId, users.UserName } into grouped
+    //                        select new ApprovalUsersClass
+    //                        {
+    //                            userId = grouped.Key.UserId,
+    //                            userName = grouped.Key.UserName,
+    //                            countIshurim = grouped.Count()
+    //                        };
+    //    return approvalUsers.ToList();
+    //}
 
-    public class WhereStatusAdsClass
-    {
-        public string? adStatusName { get; set; }
-        public int countAdsInStatus { get; set; }
-    }
-    public List<WhereStatusAdsClass> WhereStatusAds(string selectedMonth)
-    {
-        DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
-        var whereStatusAds = from adsIshurim in _db.IshurForAds
-                             join ishurim in _db.Ishurims on adsIshurim.KodIshur equals ishurim.KodIshur
-                             join statusAd in _db.StatusAds on ishurim.StatusAdId equals statusAd.StatusAdId
-                             where adsIshurim.ExecutionDate == parsedDate
-                             group statusAd by new { statusAd.StatusAdId, statusAd.StatusAdName } into grouped
-                             select new WhereStatusAdsClass
-                             {
-                                 adStatusName = grouped.Key.StatusAdName,
-                                 countAdsInStatus = grouped.Count()
-                             };
-        return whereStatusAds.ToList();
-    }
+    //public class WhereStatusAdsClass
+    //{
+    //    public string? adStatusName { get; set; }
+    //    public int countAdsInStatus { get; set; }
+    //}
+    //public List<WhereStatusAdsClass> WhereStatusAds(string selectedMonth)
+    //{
+    //    DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
+    //    var whereStatusAds = from adsIshurim in _db.IshurForAds
+    //                         join ishurim in _db.Ishurims on adsIshurim.KodIshur equals ishurim.KodIshur
+    //                         join statusAd in _db.StatusAds on ishurim.StatusAdId equals statusAd.StatusAdId
+    //                         where adsIshurim.ExecutionDate == parsedDate
+    //                         group statusAd by new { statusAd.StatusAdId, statusAd.StatusAdName } into grouped
+    //                         select new WhereStatusAdsClass
+    //                         {
+    //                             adStatusName = grouped.Key.StatusAdName,
+    //                             countAdsInStatus = grouped.Count()
+    //                         };
+    //    return whereStatusAds.ToList();
+    //}
 
-    public class AdCategoryClass
-    {
-        public string? adTypesName { get; set; }
-        public int countAdsInType { get; set; }
-    }
-    public List<AdCategoryClass> AdCategory(string selectedMonth)
-    {
-        DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
-        var adCategory = from ads in _db.Ads
-                         join adsType in _db.AdTypes on ads.AdTypeId equals adsType.AdTypeId
-                         join publicationDate in _db.PublicationDates on ads.AdId equals publicationDate.AdId
-                         where publicationDate.PublicationDate1 == parsedDate
-                         group adsType by new { adsType.AdTypeId, adsType.DescriptionAdTypes } into grouped
-                         select new AdCategoryClass
-                         {
-                             adTypesName = grouped.Key.DescriptionAdTypes,
-                             countAdsInType = grouped.Count()
-                         };
-        return adCategory.ToList();
-    }
+    //public class AdCategoryClass
+    //{
+    //    public string? adTypesName { get; set; }
+    //    public int countAdsInType { get; set; }
+    //}
+    //public List<AdCategoryClass> AdCategory(string selectedMonth)
+    //{
+    //    DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
+    //    var adCategory = from ads in _db.Ads
+    //                     join adsType in _db.AdTypes on ads.AdTypeId equals adsType.AdTypeId
+    //                     join publicationDate in _db.PublicationDates on ads.AdId equals publicationDate.AdId
+    //                     where publicationDate.PublicationDate1 == parsedDate
+    //                     group adsType by new { adsType.AdTypeId, adsType.DescriptionAdTypes } into grouped
+    //                     select new AdCategoryClass
+    //                     {
+    //                         adTypesName = grouped.Key.DescriptionAdTypes,
+    //                         countAdsInType = grouped.Count()
+    //                     };
+    //    return adCategory.ToList();
+    //}
 
-    public class sumCustomerCharge
-    {
-        public string customerName { get; set; }
-        public decimal? sumCharge { get; set; }
-    }
-    public List<sumCustomerCharge> SumCustomerCharge(string selectedMonth)
-    {
-        DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
-        var sumCustomerCharge = from customers in _db.Customers
-                                join customerCharge in _db.CustomerCharges on customers.CustomerId equals customerCharge.CustomerId
-                                where customerCharge.ChargeDate == parsedDate
-                                group customerCharge by new { customerCharge.CustomerId, customers.CustomerName } into grouped
-                                select new sumCustomerCharge
-                                {
-                                    customerName = grouped.Key.CustomerName,
-                                    sumCharge = grouped.Sum(x => x.ChargeAmount)
-                                };
-        return sumCustomerCharge.ToList();
-    }
+    //public class sumCustomerCharge
+    //{
+    //    public string customerName { get; set; }
+    //    public decimal? sumCharge { get; set; }
+    //}
+    //public List<sumCustomerCharge> SumCustomerCharge(string selectedMonth)
+    //{
+    //    DateTime parsedDate = DateTime.ParseExact(selectedMonth, "yyyy-MM", null);
+    //    var sumCustomerCharge = from customers in _db.Customers
+    //                            join customerCharge in _db.CustomerCharges on customers.CustomerId equals customerCharge.CustomerId
+    //                            where customerCharge.ChargeDate == parsedDate
+    //                            group customerCharge by new { customerCharge.CustomerId, customers.CustomerName } into grouped
+    //                            select new sumCustomerCharge
+    //                            {
+    //                                customerName = grouped.Key.CustomerName,
+    //                                sumCharge = grouped.Sum(x => x.ChargeAmount)
+    //                            };
+    //    return sumCustomerCharge.ToList();
+    //}
 
     public class StatusForRejectionClass
     {

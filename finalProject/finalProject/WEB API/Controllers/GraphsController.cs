@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using static finalProject.DAL;
 
 namespace finalProject.WEB_API.Controllers
 {
@@ -8,7 +7,7 @@ namespace finalProject.WEB_API.Controllers
     [ApiController]
     public class GraphsController : ControllerBase
     {
-        BL fromBl = new BL();
+        GraphsBL fromBl = new GraphsBL();
 
         [HttpGet("ApprovalUsers/{selectedMonth}")]
         public IActionResult ApprovalUsers(string selectedMonth)
